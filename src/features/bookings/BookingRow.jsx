@@ -102,7 +102,7 @@ function BookingRow({
           <Menus.List id={bookingId}>
             <Menus.Button
               icon={<HiEye />}
-              onClick={() => navigate(`/booking/${bookingId}`)}
+              onClick={() => navigate(`/bookings/${bookingId}`)}
             >
               See details
             </Menus.Button>
@@ -127,7 +127,7 @@ function BookingRow({
             )}
 
             <Modal.Open opens="delete">
-              <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
+              <Menus.Button icon={<HiTrash />}>Delete booking</Menus.Button>
             </Modal.Open>
           </Menus.List>
         </Menus.Menu>
