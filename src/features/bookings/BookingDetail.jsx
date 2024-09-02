@@ -90,6 +90,13 @@ function BookingDetail() {
             />
           </Modal.Window>
         </Modal>
+<<<<<<< HEAD
+=======
+
+        <Button variation="secondary" onClick={moveBack}>
+          Back
+        </Button>
+>>>>>>> 85d5067530cf5f6afdfefd34c579fc16b77185e3
       </ButtonGroup>
     </>
   );

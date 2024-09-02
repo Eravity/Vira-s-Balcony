@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
+=======
+>>>>>>> 85d5067530cf5f6afdfefd34c579fc16b77185e3
 import { useSearchParams } from "react-router-dom";
 import styled, { css } from "styled-components";
 
@@ -26,6 +29,10 @@ const FilterButton = styled.button`
   border-radius: var(--border-radius-sm);
   font-weight: 500;
   font-size: 1.4rem;
+<<<<<<< HEAD
+=======
+  /* To give the same height as select */
+>>>>>>> 85d5067530cf5f6afdfefd34c579fc16b77185e3
   padding: 0.44rem 0.8rem;
   transition: all 0.3s;
 
@@ -37,6 +44,7 @@ const FilterButton = styled.button`
 
 function Filter({ filterField, options }) {
   const [searchParams, setSearchParams] = useSearchParams();
+<<<<<<< HEAD
   const [currentFilter, setCurrentFilter] = useState(
     localStorage.getItem(filterField) || options.at(0).value
   );
@@ -58,11 +66,19 @@ function Filter({ filterField, options }) {
 
   function handleClick(value) {
     setCurrentFilter(value);
+=======
+  const currentFilter = searchParams.get(filterField) || options.at(0).value;
+
+  function handleClick(value) {
+>>>>>>> 85d5067530cf5f6afdfefd34c579fc16b77185e3
     searchParams.set(filterField, value);
     if (searchParams.get("page")) searchParams.set("page", 1);
 
     setSearchParams(searchParams);
+<<<<<<< HEAD
     localStorage.setItem(filterField, value);
+=======
+>>>>>>> 85d5067530cf5f6afdfefd34c579fc16b77185e3
   }
 
   return (
